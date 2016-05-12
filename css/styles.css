@@ -1,0 +1,229 @@
+/* Make the page a minimum of as tall as the screen height */
+html, body{
+	height: 100%;
+}
+
+/* Do not show background image on mobile devices */
+@media (min-width: 768px) {	
+	/* background image */
+	body{
+		background-image: url("../img/background.jpg");
+		background-attachment: fixed;
+		background-position: center top;
+		background-size: auto 100%;
+	}
+}
+
+/* Control image at the top of center page */
+#header-image{
+	/* Make image shrink if window gets too small */
+	max-width: 100%;
+}
+
+/* make sure that footer is flushed to the bottom of page */
+#container{
+	min-height: 90%;
+    height: auto !important;
+    height: 90%; /* IE 5-6 */
+	/* Add space between body and footer */
+	margin-bottom: 10px;
+}
+
+/* Use Google font for headers */
+h1, h2, h3, h4{
+	font-family: 'Covered By Your Grace', cursive;
+}
+
+/* Center footer at the bottom of page */
+footer {
+	/* Add space to the bottom of page if overflow */
+	margin-bottom: 10px;
+
+	/* Center text at the bottom of screen */
+	width: 100%;
+	text-align: center;
+	
+	/* Add mobile friendly padding or if screen width is too small for comfort */
+	padding-left: 14px;
+	padding-right: 14px;
+
+} 
+
+/* Prevent dotted line from appearing on links in navigation */
+ul.navbar-nav > li > a{
+   outline: 0px none;
+}
+
+/* do not show animations on mobile devices*/
+@media (min-width: 768px) {
+	/* special hover fade effect on nav bar */
+	ul.navbar-nav > li{
+		-o-transition:.5s; /* Opera 12+ */
+		-ms-transition:.5s; /* IE 9+ */
+		-moz-transition:.5s; /* Fx 5+ */
+		-webkit-transition:.5s;	/* Safari 4+ */			
+		transition:.5s; /* IE 10+, Fx 29+ */
+	}
+	ul.navbar-nav > li:hover{
+		background-color: #555;
+		border-radius: 25px;
+	}
+	a{
+		-o-transition:.5s; /* Opera 12+ */
+		-ms-transition:.5s; /* IE 9+ */
+		-moz-transition:.5s; /* Fx 5+ */
+		-webkit-transition:.5s;	/* Safari 4+ */			
+		transition:.5s; /* IE 10+, Fx 29+ */
+	}
+	/*special hover fade effect on links*/
+	a.footer:hover{
+		padding: 20px;
+		background-color: #222;
+		border-radius: 25px;
+		color: #fff;
+	}
+}
+
+/* used for links in footer*/
+a.footer    {color:#222; text-decoration:none}
+
+/* divisions on videos and merch page */
+div.page {
+	background-color: #555;
+	border-radius: 25px;
+	padding: 20px;
+	margin: 25px;
+	color: black;
+	display: inline-block;
+	max-width: 90%;
+}
+div.merch {
+	background-color: #555;
+	border-radius: 25px;
+	padding: 20px;
+	margin: 25px;
+	color: black;
+	display: inline-block;
+	max-width: 90%;
+}
+
+/* Images on the merch page that are in links */
+div.merch > a > img{
+	max-height: 500px;
+	width: 100%;
+}
+
+/* iframes on videos page */
+div.page > iframe{
+	width: 470px;
+	max-width: 100%;
+	height: 300px;
+}
+
+/* footer divisions */
+div.videofooter{
+	text-align: center;
+	background-color: #555;
+	border-radius: 25px;
+	padding: 20px;
+	margin: 25px;
+	color: black;
+}
+
+/* image on homepage */
+.page-home-img{
+	max-width: 100%;
+	border-radius: 25px;
+	padding: 7px;
+}
+
+.page-home-img.pull-right{
+	clear: left;
+}
+
+/* animations provided for page routing */
+
+/* Chrome, Safari, Opera */ 
+/* fade out */
+@-webkit-keyframes animate-fade-out {
+	0% {
+		opacity: 1; 
+	}
+	100% { 
+		opacity: 0; 
+	}
+}
+
+/* fade in */
+@-webkit-keyframes aniamte-fade-in {
+    0% { 
+    	opacity: 0;
+    }
+	/* Do not fade in until after other has faded out */
+	51% { 
+    	opacity: 0;
+    }
+    100% { 
+    	opacity: 1; 
+    }
+}	
+
+/* Firefox and IE */
+/* fade out */
+@keyframes animate-fade-out {
+	0% {
+		opacity: 1; 
+	}
+	100% { 
+		opacity: 0; 
+	}
+}
+
+/* fade in */
+@keyframes aniamte-fade-in {
+    0% { 
+    	opacity: 0;
+    }
+	/* Do not fade in until after other has faded out */
+	51% { 
+    	opacity: 0;
+    }
+    100% { 
+    	opacity: 1; 
+    }
+}
+
+/* Angular Animations for switching pages */
+.ng-enter { 
+	-o-animation: aniamte-fade-in 1.0s both ease-in; /* Opera 12+ */
+	-ms-animation: aniamte-fade-in 1.0s both ease-in; /* IE 9+ */
+	-moz-animation: aniamte-fade-in 1.0s both ease-in; /* Fx 5+ */
+	-webkit-animation: aniamte-fade-in 1.0s both ease-in; /* Safari 4+ */	
+	animation: aniamte-fade-in 1.0s both ease-in; /* IE 10+, Fx 29+ */
+	z-index: 8888;
+}
+.ng-leave { 
+	-o-animation: animate-fade-out 0.5s both ease-in; /* Opera 12+ */
+	-ms-animation: animate-fade-out 0.5s both ease-in; /* IE 9+ */
+	-moz-animation: animate-fade-out 0.5s both ease-in; /* Fx 5+ */
+	-webkit-animation: animate-fade-out 0.5s both ease-in; /* Safari 4+ */	
+	animation: animate-fade-out 0.5s both ease-in; /* IE 10+, Fx 29+ */
+	z-index: 9999; 
+}
+
+/* Table Settings */
+.center1 {
+	padding: 70px;
+	border-bottom: solid 1px #959595;
+}
+
+/* Hover Mechanics for Tables */
+a.tr:hoover{
+	background-color: rgba(255, 255, 255, 0.65);
+}
+
+/*Checkbox Padding*/
+.timesheet-daily-checkbox input {
+    margin: 10px;
+    padding: 10px;
+}

@@ -1,0 +1,57 @@
+<section>
+	<h1>Contact Wavves</h1>
+
+	<div>
+		<h3>Contact us with any comments or suggestions for  merch or shows</h3>
+	</div>
+		<!--Keep Style Safe for general text-->
+	<div>
+		<form method="post" action="mailto:bjolle23@ldsbc.edu" enctype="text/plain">
+
+		<p>Your name:
+			<input type="text" name="customername" size="40" maxlength="50" required=""/>
+		</p>
+		<!--Div set for alignment-->
+		<p>Are you interested in additional information about the band?
+			<br/>
+			<div class="timesheet-daily-checkbox">
+			<input type="radio" name="answer" value="Yes"/>Yes
+			<input type="radio" name="answer" value="No"/>No
+			</div>
+		</p>
+		<!--Div set for alignment-->
+		<p>What genre would you like to see us break into next? (select all that apply):
+			<br/>
+			<div class="timesheet-daily-checkbox">
+			<input type="checkbox" name="Indie Rock" value="Yes"/>Indie Rock
+			<input type="checkbox" name="Reggae" value="Yes"/>Reggae
+			<input type="checkbox" name="Blues Rock" value="Yes"/>Blues Rock
+			<input type="checkbox" name="Industrial-Aggrotech" value="Yes"/>Industrial-Aggrotech
+			</div>
+		</p>
+					
+		<p>Your e-mail:
+			<input type="email" name="emailaddress" size="25" maxlength="254"/>
+		</p>
+
+		<p>Your website:
+			<input type="url" name="webaddress" size="40" maxlength="200" placeholder="http://yoursite.com"/>
+		</p>
+
+		<p>Your phone number (example: 555-555-1234):
+			<input type="tel" name="phone" pattern="[0-9] {3}-[0-9]{3}-[0-9]{4}" size="15" maxlength="15"/>
+		</p>
+
+		<p>Comment:
+			<br/>
+			<textarea name="customercomment" rows="5" cols="60" wrap="hard">
+			Add your comment here.
+			</textarea>
+		</p>
+
+		<input type="submit" value="Send"/>
+		<input type="reset" value="Reset"/>
+
+		</form>
+	</div>
+</section>
